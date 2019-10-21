@@ -115,7 +115,7 @@ class UsersController extends Controller
     public function confirmEmail($token)
     {
         $user = User::where('activation_token', $token)->firstOrFail();
-        dump($user);exit;
+        //dump($user);exit;
 
         $user->activated = true;
         $user->activation_token = null;
